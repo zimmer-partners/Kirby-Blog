@@ -4,30 +4,21 @@
   
   <header>
     <h1><?= $page->title()->html(); ?></h1>
-    <?= $page->text()->kirbytext(); ?>
+    <?php if ($page->hasFutureChildren()): ?>
+      <?= $page->future_introduction()->kirbytext(); ?>
+    <?php else: ?>
+      <?= $page->future_no_articles()->kirbytext(); ?>
+    <?php endif; ?>
   </header>
-  
+
   <main class="main" role="main">
-
-  <?php foreach($page->children()->visible()->flip() as $article): ?>
-
-  <article>
-    <h1>
-      <time datetime="<?= $article->date('%Y-%m-%dT%H:%M:%S') ?>"><?= $article->date('%d.%m.%y') ?></time>: 
-      <?= $article->title()->html() ?>
-    </h1>
-    <p>
-      <?php if (str::length(strip_tags($article->text()->kirbytext())) > 300): ?>
-        <?= $article->text()->excerpt(300); ?>&nbsp;
-        <a class="more" href="<?= $article->url(); ?>">Weiter lesen</a>
-      <?php else: ?>
-        <?= $article->text()->excerpt(300); ?>
-      <?php endif; ?>
-    </p>
-  </article>
   
-  <?php endforeach ?>
-  
+    <?php snippet('future-section'); ?>
+    
+    <?php if ($page->past_enabled()->bool()): ?>
+      <?php snippet('past-section'); ?>
+    <?php endif ?>
+    
   </main>
   
 </section>
