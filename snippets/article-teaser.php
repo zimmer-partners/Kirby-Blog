@@ -5,12 +5,5 @@
       <?= $article->title()->html() ?>
     </a>
   </h1>
-  <p>
-    <?php if (str::length(strip_tags($article->text()->kirbytext())) > 300): ?>
-      <?= $article->text()->excerpt(300); ?>&nbsp;
-      <a class="more" href="<?= $article->url(); ?>">Weiter lesen</a>
-    <?php else: ?>
-      <?= $article->text()->excerpt(300); ?>
-    <?php endif; ?>
-  </p>
+  <?= $article->text()->tidy(300, "<a class=\"more\" href=\"{$article->url()}\">Weiter lesen</a>"); ?>
 </article>
