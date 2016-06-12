@@ -4,7 +4,7 @@ title: Blog
 pages:
   template:
     - article
-    - calendars
+    - calendar
   num:
     mode: date
     field: date
