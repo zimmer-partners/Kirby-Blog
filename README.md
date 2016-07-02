@@ -7,7 +7,7 @@ Kirby Plugin for a plain and simple blog.
 ## Manual Setup
 
 1. Download the Git repository as a Zip.
-2. Unpack the Zip and move the resulting directory to `site/plugins`.
+2. Unpack the Zip and move contents of resulting directory to `site/plugins/blog`.
 
 ## Git Setup
 
@@ -16,7 +16,7 @@ Kirby Plugin for a plain and simple blog.
 
 ## Creating a Blog and Posts
 
-1. Open Panel
+1. Open Kirby Panel.
 2. Create a Blog page.
 3. Fill out the blog page form and configure it to you need.
 4. Add Article pages as children to the Blog page.
@@ -39,5 +39,9 @@ c::set('tidy', true);
 
 # Version History #
 
-- v1.0 First official release
+- v1.0: First official release
+- v1.0.1: Fixed installation guide
 
+# Planned Additions
+
+- Integration with a bullet proof version of my [Calendar plugin fork](https://github.com/moritzz/kirby-calendar-plugin).
