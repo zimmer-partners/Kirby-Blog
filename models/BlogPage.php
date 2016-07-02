@@ -31,8 +31,4 @@ class BlogPage extends Page {
     return $this->pastChildren()->count() > 0;
   }
   
-  public function highMoon($value='') {
-    # code...
-  }
-  
 }
