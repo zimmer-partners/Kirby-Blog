@@ -14,7 +14,7 @@ fields:
   text:
     label: Text
     type:  textarea
-  calendar:
+  events:
     label: Calendar
     type: structure
     entry: >
@@ -30,19 +30,19 @@ fields:
         label: Description
         type: textarea
         size: small
-      _begin_date:
+      begin_date:
         label: Beginning date
         type: date
         format: MM/DD/YYYY
-      _begin_time:
+      begin_time:
         label: Beginning time
         type: time
         interval: 15
-      _end_date:
+      end_date:
         label: Ending date
         type: date
         format: MM/DD/YYYY
-      _end_time:
+      end_time:
         label: Ending time
         type: time
         interval: 15
