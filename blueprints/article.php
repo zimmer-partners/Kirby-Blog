@@ -20,8 +20,8 @@ fields:
     entry: >
       <strong>{{summary}}</strong><br>
       {{description}}<br>
-      Beginning: {{_begin_date}} {{_begin_time}}<br>
-      End: {{_end_date}} {{_end_time}}
+      Beginning: {{begin_date}} {{begin_time}}<br>
+      End: {{end_date}} {{end_time}}
     fields:
       summary:
         label: Summary
