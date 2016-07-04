@@ -53,3 +53,4 @@ c::set('tidy', true);
 - v1.0: First official release
 - v1.0.1: Fixed installation guide
 - v1.1: Added Calendar integration
+- v1.1.1: Fixed field name mismatch
