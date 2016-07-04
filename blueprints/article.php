@@ -15,7 +15,7 @@ fields:
     label: Text
     type:  textarea
   events:
-    label: Calendar
+    label: Events
     type: structure
     entry: >
       <strong>{{summary}}</strong><br>

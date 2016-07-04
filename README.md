@@ -18,10 +18,21 @@ Kirby Plugin for a plain and simple blog.
 
 1. Open Kirby Panel.
 2. Create a Blog page.
-3. Fill out the blog page form and configure it to you need.
+3. Fill out the blog page form and configure it to your need.
 4. Add Article pages as children to the Blog page.
 
 To run multiple blogs on one site too, just create multiple Blog pages with corresponding Article child pages.
+
+### Integration with Calendar
+
+1. Follow the [installation instructions for my Calendar plugin](https://github.com/moritzz/Kirby-Calendar/blob/master/README.md).
+2. Open any Blog page in Panel.
+3. Add a Calendar page along your Articles.
+4. Configure the Calendar.
+5. Set Status of your Calendar to visible.
+6. Add Events to any of your Article pages.
+
+Because Calendar pages automatically generate a stream of all their sibling's and children's events, you can now publish the URL of your calendar page with `webcal://` instead of `http://` as protocol. Users clicking such a link on a system with a valid Calendar App installed, will be directed to subscribe to the stream automatically.
 
 # Activate Formatted Article Teasers
 
@@ -41,7 +52,4 @@ c::set('tidy', true);
 
 - v1.0: First official release
 - v1.0.1: Fixed installation guide
-
-# Planned Additions
-
-- Integration with a bullet proof version of my [Calendar plugin fork](https://github.com/moritzz/kirby-calendar-plugin).
+- v1.1: Added Calendar integration
