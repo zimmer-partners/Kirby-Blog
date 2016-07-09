@@ -18,6 +18,8 @@ $kirby->set('snippet', 'article-teaser', __DIR__ . '/snippets/article-teaser.php
 
 require_once(__DIR__ . '/models/BlogPage.php');
 $kirby->set('page::model', 'blog', 'BlogPage');
+require_once(__DIR__ . '/models/ArticlePage.php');
+$kirby->set('page::model', 'article', 'ArticlePage');
 
 
 field::$methods['tidy'] = function($field, $length = 140, $mode = 'chars', $ellipsis = '…') {
