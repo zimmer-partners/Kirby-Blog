@@ -35,17 +35,16 @@ field::$methods['tidy'] = function($field, $length = 140, $mode = 'chars', $elli
   );
   // Read configuration entry
   if (c::get('tidy')) {
-    $text = $field;
     // Mode algorith taken from Kirby core
     if(strtolower($mode) == 'words') {
-      $text = str::excerpt(kirbytext($text), 0, false, $ellipsis);
+      $text = str::excerpt($field->kirbytext(), 0, false, $ellipsis);
       if(str_word_count($text, 0) > $length) {
         $words = str_word_count($text, 2);
         $pos   = array_keys($words);
         $text  = str::substr($text, 0, $pos[$length]);
       }
     } else {
-      $text = str::excerpt(kirbytext($text), $length, false, $ellipsis);
+      $text = str::excerpt($field->kirbytext(), $length, false, $ellipsis);
     }
     // Tidy up potentially broken HTML
     $tidy = tidy_parse_string(
@@ -57,6 +56,6 @@ field::$methods['tidy'] = function($field, $length = 140, $mode = 'chars', $elli
     return ($tidy . "\n");
   } else {
     // Ususal method
-    return excerpt($field, $length, $mode);
+    return $field->excerpt($length, $mode);
   }
 };

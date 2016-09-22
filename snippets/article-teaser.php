@@ -5,5 +5,5 @@
       <?= $article->title()->html() ?>
     </a>
   </h1>
-  <?= $article->text()->tidy(300, "<a class=\"more\" href=\"{$article->url()}\">Weiter lesen</a>"); ?>
+  <?= $article->text()->tidy(300, 'chars', "<a class=\"more\" href=\"{$article->url()}\">Weiter lesen</a>"); ?>
 </article>
