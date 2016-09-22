@@ -34,20 +34,6 @@ To run multiple blogs on one site too, just create multiple Blog pages with corr
 
 Because Calendar pages automatically generate a stream of all their sibling's and children's events, you can now publish the URL of your calendar page with `webcal://` instead of `http://` as protocol. Users clicking such a link on a system with a valid Calendar App installed, will be directed to subscribe to the stream automatically.
 
-# Activate Formatted Article Teasers
-
-Blog can expose formatted content (aka Kirbytext) teasers on the overview pages. Because [Tidy for PHP](http://php.net/manual/en/book.tidy.php) versions diverge, you need to activate this feature by adding the snippet below to your `site/config.php` file.
-
-**Nota Bene:** If PHP throws warnings or errors, your Tidy for PHP version might be out of date. Please remove the lines below and ask your hosting provider for an update.
-
-```php
-/*
-  Blog Setup
-*/
-
-c::set('tidy', true);
-```
-
 # Version History #
 
 - v1.0: First official release
