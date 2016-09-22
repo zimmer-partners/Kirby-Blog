@@ -42,3 +42,4 @@ Because Calendar pages automatically generate a stream of all their sibling's an
 - v1.1.1: Fixed field name mismatch
 - v1.1.2: Decoupled date/time output from settings
 - v1.1.3: Switched to independent date/time output
+- v1.2: Removed formatted teaser options
